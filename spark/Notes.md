@@ -9,3 +9,6 @@ You can alter the number of concurrent writes using SELECT /** COALESCE(n) */ or
 Coalesce is a narrow transformation and the spark wouldnt shuffle your data across the cluster
 
 Repartition is a wide transformation and spark would transfer data across cluster to evenly distribute the data across the cluster
+
+#Delta Lake
+Partitioning the columns in a Delta table speeds up queries only for columns with a low cardinality. 
