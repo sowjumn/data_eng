@@ -12,3 +12,13 @@ Repartition is a wide transformation and spark would transfer data across cluste
 
 #Delta Lake
 Partitioning the columns in a Delta table speeds up queries only for columns with a low cardinality. 
+
+Creating a Delta table partitioned by City
+`
+CREATE TABLE fireCallsDelta
+USING DELTA
+PARTITIONED BY (City)
+AS
+SELECT * FROM fireCallsParquet
+
+`
